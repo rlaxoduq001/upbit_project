@@ -1,6 +1,7 @@
 import api from '../api';
 import { Dispatch } from '@reduxjs/toolkit';
 import { upbitSliceActions } from '../reducer/upbitReducer';
+import { v4 as uuid } from 'uuid';
 
 const getUpbitMarketData = () => async (dispatch: Dispatch) => {
   try {

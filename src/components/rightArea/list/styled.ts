@@ -17,14 +17,36 @@ export const IconWrapper = styled.div`
 export const CoinNameWrapper = styled.div`
   flex-basis: 30%;
 `;
-export const CoinCurrentPriceWrapper = styled.div`
+export const CoinCurrentPriceWrapper = styled.div<{ changeProp: string }>`
   flex: 20%;
+  display: flex;
+  justify-content: flex-end;
+  color: ${({ changeProp }) =>
+    changeProp === 'EVEN'
+      ? '#000000'
+      : changeProp === 'RISE'
+      ? '#FF0000'
+      : changeProp === 'FALL'
+      ? '#0000FF'
+      : 'inherit'};
 `;
 
-export const CoinComparedToPreviousWrapper = styled.div`
+export const CoinComparedToPreviousWrapper = styled.div<{ changeProp: string }>`
   flex: 10%;
+  display: flex;
+  justify-content: flex-end;
+  color: ${({ changeProp }) =>
+    changeProp === 'EVEN'
+      ? '#000000'
+      : changeProp === 'RISE'
+      ? '#FF0000'
+      : changeProp === 'FALL'
+      ? '#0000FF'
+      : 'inherit'};
 `;
 
 export const CoinTransactionAmountWrapper = styled.div`
   flex: 20%;
+  display: flex;
+  justify-content: flex-end;
 `;

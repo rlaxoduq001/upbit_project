@@ -19,7 +19,9 @@ export const CoinList: React.FC = () => {
       <div>
         {marketData.map((market, index) => {
           const ticker = tickerData[index];
-          return <CoinListItem marketData={market} tickerData={ticker} />;
+          return (
+            <CoinListItem key={index} marketData={market} tickerData={ticker} />
+          );
         })}
       </div>
     </div>
