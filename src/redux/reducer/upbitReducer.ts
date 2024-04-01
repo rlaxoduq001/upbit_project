@@ -4,11 +4,13 @@ import { MarketAll, Ticker } from '../interface';
 interface InitialState {
   marketData: MarketAll[];
   tickerData: Ticker[];
+  socketTickerData: Ticker[];
 }
 
 const initialState: InitialState = {
   marketData: [],
   tickerData: [],
+  socketTickerData: [],
 };
 
 const upbitSlice = createSlice({
@@ -21,6 +23,9 @@ const upbitSlice = createSlice({
     getTickerData(state, action) {
       state.tickerData = action.payload.tickerData;
     },
+    // getSocketTickerData(state, action) {
+    //   state.socketTickerData = action.payload.socketTickerData;
+    // },
   },
 });
 

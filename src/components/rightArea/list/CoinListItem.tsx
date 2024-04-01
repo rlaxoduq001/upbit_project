@@ -18,7 +18,7 @@ export const CoinListItem: React.FC<Props> = ({ marketData, tickerData }) => {
 
   return (
     <div>
-      <Styled.CoinListContainer>
+      <Styled.CoinItemContainer>
         <Styled.IconWrapper>
           <FontAwesomeIcon icon={regularHeart} />
         </Styled.IconWrapper>
@@ -34,7 +34,7 @@ export const CoinListItem: React.FC<Props> = ({ marketData, tickerData }) => {
         <Styled.CoinTransactionAmountWrapper>
           {formatToMillion(tickerData.acc_trade_price_24h)}
         </Styled.CoinTransactionAmountWrapper>
-      </Styled.CoinListContainer>
+      </Styled.CoinItemContainer>
     </div>
   );
 };

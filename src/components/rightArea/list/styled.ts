@@ -1,6 +1,14 @@
 import styled from '@emotion/styled';
 
+// List
 export const CoinListContainer = styled.div`
+  width: 100%;
+  height: 80vh;
+  overflow-y: auto;
+`;
+
+// Item
+export const CoinItemContainer = styled.div`
   display: flex;
   align-items: center;
   font-size: 12px;
